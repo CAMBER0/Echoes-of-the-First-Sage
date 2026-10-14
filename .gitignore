@@ -1,0 +1,24 @@
+# Private, legally obtained game data and per-machine paths
+RomFS/
+Dump/
+BaseGame/
+GameDump/
+keys/
+*.nsp
+*.xci
+
+# Downloaded applications and extracted third-party tool folders
+tools/
+third_party/
+
+# Temporary editor data and logs
+*.bak
+*.tmp
+*.log
+.vs/
+bin/
+obj/
+
+# Generated distribution archives
+releases/build/
+releases/*.zip

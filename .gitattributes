@@ -1,0 +1,6 @@
+# These formats are generated/binary and should not receive text diffs.
+*.bgyml binary
+*.byml binary
+*.bfevfl binary
+*.pack binary
+*.zs binary
