@@ -2,11 +2,16 @@
 
 **A DLC-sized story expansion for _The Legend of Zelda: Tears of the Kingdom_, in which Link investigates a Zonai energy surge in the Forgotten Temple and crosses a Chronolith into Ancient Hyrule, 10,000 years before the present era.**
 
-There, alongside the Ancient Hero, he must uncover the source of a temporal rupture before returning to a changed modern Hyrule.
+There, alongside an echo of the Ancient Hero, he must uncover the source of a temporal rupture before returning to a changed modern Hyrule.
 
 ## Project status
 
-Pre-production / tooling setup.
+Story and technical pre-production. The first playable modern-era hook is the next milestone.
+
+## Design documents
+
+- [Story bible](docs/story-bible.md) — complete narrative, character guide, canon boundaries, and accessibility commitments.
+- [Phase 1 implementation plan](docs/phase-01-modern-hook.md) — the first safe, testable gameplay milestone.
 
 ## Repository policy
 

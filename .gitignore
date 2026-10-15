@@ -1,5 +1,5 @@
 # Private, legally obtained game data and per-machine paths
-RomFS/
+/RomFS/
 Dump/
 BaseGame/
 GameDump/
