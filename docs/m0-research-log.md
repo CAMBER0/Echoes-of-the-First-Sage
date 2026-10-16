@@ -28,6 +28,19 @@ The exact Forgotten Temple grid and a non-blocking entrance transform still need
 4. Whether the actor belongs in the static or dynamic cell.
 5. A screenshot or written note showing that the entrance neither blocks existing geometry nor traps the player.
 
+## Approved visual placement
+
+The entrance is approved on the **large blank interior wall above the circular-room ledge**, centered between the two central stone pillars. The intended feature occupies the broad masonry panel rather than an existing arch, doorway, or traversal route.
+
+For the first playable build, treat this as a **flush sealed archive door** with a nearby interactable Chronolith element. Do not cut a physical opening through the temple mesh yet. A flush, visibly dormant door lets us validate placement, interaction range, event flow, and save persistence without risking collision holes or broken navigation. The later reveal can swap or animate authored door-state geometry after the baseline loop is stable.
+
+### Placement guardrails
+
+- Keep the lower ledge traversable and leave both adjacent arches unobstructed.
+- Position the interaction point at reachable ledge height; never require climbing a decorative wall.
+- Keep the door's collision shallow until the future interior transfer is confirmed.
+- Place the temporary Chronolith interaction point slightly in front of the wall, never inside static collision.
+
 ## Source-control boundary
 
 The reference RomFS remains private and outside this repository. After the target grid and base flow are verified, copy only the edited overlay file or files into source/romfs/ while preserving their exact game-relative paths.

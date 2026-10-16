@@ -24,6 +24,10 @@ Do not invent binary filenames. First inspect the personal RomFS dump, identify 
 
 The angle-bracket labels mean “verify in the private dump first,” never “guess a filename.” The repository receives only the changed overlay files, never the complete RomFS.
 
+## Chosen entrance composition
+
+The sealed Archive of Hours entrance belongs on the large blank masonry panel above the Forgotten Temple's circular-room ledge, centered between the inner pillars. Phase 1 uses a flush sealed door and a small, reachable interaction point in front of it. The player transfers to the trial instance after the Chronolith scene; Phase 1 does not attempt to cut a real hole into the existing temple mesh.
+
 ## Vertical-slice state flow
 
 This is a structural mockup for Event Editor, not an importable .bfevfl.

@@ -1,0 +1,30 @@
+# Design-only placement manifest. Not a MapEditor import and not a game BYML.
+# Fill verified_map_grid and transform only from the user-selected MapEditor actor.
+
+schema: echoes-ancient-hero-map-placement-design/v1
+placement_id: archive_of_hours_sealed_entrance
+world: MainField
+verified_map_grid: null
+
+visual_anchor:
+  description: >
+    Large blank interior masonry panel above the Forgotten Temple circular-room
+    ledge, centered between the two inner pillars.
+  phase_1_composition: Flush sealed door plus a reachable Chronolith interaction point.
+
+transform:
+  position_xyz: null
+  rotation_xyz_degrees: null
+  scale_xyz: [1.0, 1.0, 1.0]
+
+collision_and_navigation:
+  preserves_lower_ledge_traversal: true
+  preserves_adjacent_arches: true
+  interaction_point_in_front_of_static_collision: true
+  phase_1_door_opens_physical_passage: false
+
+implementation_state:
+  native_door_actor: null
+  native_interaction_flow: null
+  source_overlay_file: null
+  verified_in_game: false
