@@ -57,4 +57,10 @@ This is a probe only. Do not overwrite Npc_Wanderer_LostTemple, and do not save 
 
 The actor was centered successfully at (-953.500, 33.000, -2821.500) with rotation (0.000, -41.000, 0.000) and scale (1.000, 1.000, 1.000). The offset holds the object slightly in front of the wall, which is the desired placement behavior.
 
-The art result is rejected for the final entrance: its vertical green bars read as a conventional gate, not a concealed Chronolith archive seal. Retain the transform as a dimensional reference only. The next uncommitted preview candidate is DgnObj_Zonau_Shutter_A_01.
+The art result is rejected for the final entrance: its vertical green bars read as a conventional gate, not a concealed Chronolith archive seal. Retain the transform as a dimensional reference only.
+
+## Next visual probe: Great Sky Island Temple of Time door
+
+The verified solid-door actor is SkyObj_TempleOfTimeDoor_A_01. It is the preferred Phase 1 visual candidate because it hides the existing wall and matches the intended ancient, sealed-archive language. Preview this door **alone** first; its optional matching frame is SkyObj_TempleOfTimeDoorFrame_A_01.
+
+These are base-game actor references, not files to copy into the mod. If the final placement works, the overlay needs only the modified D-2 map data that places the existing actor. Do not copy Pack/Actor files from the reference RomFS into this repository.
