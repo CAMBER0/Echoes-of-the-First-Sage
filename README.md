@@ -1,17 +1,18 @@
-# Echoes of the First Sage
+# Echoes of the Ancient Hero
 
-**A DLC-sized story expansion for _The Legend of Zelda: Tears of the Kingdom_, in which Link investigates a Zonai energy surge in the Forgotten Temple and crosses a Chronolith into Ancient Hyrule, 10,000 years before the present era.**
+**A late-game, DLC-sized fan campaign for _The Legend of Zelda: Tears of the Kingdom_.** After the four Regional Phenomena and discovery of the Dragon's Tears map, Link discovers the Archive of Hours beneath the Forgotten Temple. Its Chronolith does not rewrite history: it opens controlled rifts into five sealed trial-sites tied to an incomplete record of the Ancient Hero.
 
-There, alongside an echo of the Ancient Hero, he must uncover the source of a temporal rupture before returning to a changed modern Hyrule.
+Link earns the restricted **Echo Trace** ability, restores five regional seals in any order, and returns to the temple to enter the Citadel of the Last Hour. The campaign ends with the Hollow Champion, a deliberately original archive-born foe, and the Echo Covenant upgrade.
 
 ## Project status
 
-Story and technical pre-production. The first playable modern-era hook is the next milestone.
+Story and technical pre-production. The first playable milestone is the Chronolith Trial vertical slice.
 
 ## Design documents
 
-- [Story bible](docs/story-bible.md) — complete narrative, character guide, canon boundaries, and accessibility commitments.
-- [Phase 1 implementation plan](docs/phase-01-modern-hook.md) — the first safe, testable gameplay milestone.
+- [Story bible](docs/story-bible.md) - campaign structure, canon boundaries, regional chapters, and player-facing rewards.
+- [Chronolith Trial plan](docs/phase-01-modern-hook.md) - the first safe, testable gameplay milestone.
+- [Flag registry](docs/flag-registry.md) - design-state names and save-persistence rules; not yet native game-data keys.
 
 ## Repository policy
 
@@ -19,10 +20,11 @@ This repository contains original mod source, documentation, build scripts, and 
 
 ## Layout
 
-- `docs/` — design notes, quest-state diagrams, flag registry, and installation instructions.
-- `source/romfs/` — the mod's intended RomFS overlay, organized by game path.
-- `scripts/` — repeatable validation and build automation.
-- `releases/` — release notes and packaging manifests; generated archives remain untracked.
+- docs/ - design notes, quest-state diagrams, flag registry, and installation instructions.
+- source/romfs/ - the mod's intended RomFS overlay, organized by game path.
+- source/design/ - project-owned implementation specifications, safe to version before binary game files exist.
+- scripts/ - repeatable validation and build automation.
+- releases/ - release notes and packaging manifests; generated archives remain untracked.
 
 ## Development requirements
 

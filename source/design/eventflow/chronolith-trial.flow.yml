@@ -1,0 +1,62 @@
+# Design-only EventFlow contract. This is not a TotK .bfevfl file.
+#
+# Convert this structure only after a compatible native flow, game-data key type,
+# and map-transfer pattern have been inspected in the private RomFS dump.
+
+schema: echoes-ancient-hero-eventflow-design/v1
+flow_name: ChronolithTrial
+entry_points:
+  - ForgottenTemple_ArchiveTrigger
+  - Chronolith_Interact
+  - Trial_Room_Recall
+  - Trial_Room_Ultrahand
+  - Trial_Room_Sentinel
+
+queries:
+  - id: prerequisite_check
+    condition: EotAH_PrerequisitesMet
+  - id: archive_discovered
+    condition: EotAH_ArchiveDiscovered
+  - id: echo_trace_unlocked
+    condition: EotAH_EchoTraceUnlocked
+  - id: recall_target_restored
+    condition: EotAH_Trial_RecallComplete
+  - id: ultrahand_route_complete
+    condition: EotAH_Trial_UltrahandComplete
+  - id: sentinel_resolved
+    condition: EotAH_Trial_SentinelComplete
+
+state_transitions:
+  - from: ForgottenTemple_ArchiveTrigger
+    when: prerequisite_check
+    false: PreserveVanillaTempleBehavior
+    true: DiscoverArchiveOrOpenChronolith
+  - from: Chronolith_Interact
+    when: echo_trace_unlocked
+    true: ShowRiftGuidance
+    false: StartChronolithTrial
+  - from: StartChronolithTrial
+    actions:
+      - LockPlayerInput
+      - PlayArchiveCameraAndText
+      - SetFlag:EotAH_ChronolithTrialStarted
+      - FadeOut
+      - TransferTo: VERIFIED_TRIAL_INSTANCE
+      - FadeIn
+      - RestorePlayerInput
+  - from: Trial_Room_Recall
+    when: recall_target_restored
+    true: Trial_Room_Ultrahand
+  - from: Trial_Room_Ultrahand
+    when: ultrahand_route_complete
+    true: Trial_Room_Sentinel
+  - from: Trial_Room_Sentinel
+    when: sentinel_resolved
+    true: CompleteTrialAndRevealRifts
+
+completion:
+  actions:
+    - SetFlag:EotAH_EchoTraceUnlocked
+    - SetFlag:EotAH_ChronolithTrialComplete
+    - SetFlag:EotAH_FiveRiftsRevealed
+    - ReturnTo: VERIFIED_ARCHIVE_ARRIVAL
