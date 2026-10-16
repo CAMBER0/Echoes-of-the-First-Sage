@@ -21,6 +21,15 @@ transform:
   position_xyz: null
   rotation_xyz_degrees: null
   scale_xyz: [1.0, 1.0, 1.0]
+  tested_visual_probe:
+    actor: CaveObj_RuinZonau_Shutter_B_01
+    position_xyz: [-953.500, 33.000, -2821.500]
+    rotation_xyz_degrees: [0.0, -41.0, 0.0]
+    scale_xyz: [1.0, 1.0, 1.0]
+    result: >
+      Centered correctly and remains in front of the wall, but reads as a green
+      barred gate rather than a sealed Chronolith archive door. Keep only as a
+      dimensional reference; do not select as the final visual.
 
 collision_and_navigation:
   preserves_lower_ledge_traversal: true
@@ -31,10 +40,12 @@ collision_and_navigation:
 implementation_state:
   native_door_actor: null
   first_visual_probe_actor: CaveObj_RuinZonau_Shutter_B_01
+  next_visual_probe_actor: DgnObj_Zonau_Shutter_A_01
   first_visual_probe_notes: >
-    Candidate only. Preview it as a separate Static actor in MapEditor before
-    saving. Reject it if its proportions, collision, or visual language conflict
-    with the temple wall.
+    The first candidate was a useful transform probe but was rejected as the
+    final art direction. Preview the next candidate without saving and only
+    select a final actor after its proportions, collision, and visual language
+    have been verified.
   native_interaction_flow: null
   source_overlay_file: null
   vanilla_reference_actor_must_remain_unchanged: true

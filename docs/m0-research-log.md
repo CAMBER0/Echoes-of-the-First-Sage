@@ -52,3 +52,9 @@ The reference RomFS remains private and outside this repository. After the targe
 The first actor to preview, without saving, is CaveObj_RuinZonau_Shutter_B_01. It is a candidate because it is a separate Zonai-ruin shutter actor rather than a vanilla NPC or an already scripted door. Add it as a **Static** actor in D-2, initially at the recorded reference point, then inspect its orientation, scale, and collision visually.
 
 This is a probe only. Do not overwrite Npc_Wanderer_LostTemple, and do not save the D-2 map until the actor is confirmed to fit the wall and a separate interaction method has been chosen.
+
+### Probe result: CaveObj_RuinZonau_Shutter_B_01
+
+The actor was centered successfully at (-953.500, 33.000, -2821.500) with rotation (0.000, -41.000, 0.000) and scale (1.000, 1.000, 1.000). The offset holds the object slightly in front of the wall, which is the desired placement behavior.
+
+The art result is rejected for the final entrance: its vertical green bars read as a conventional gate, not a concealed Chronolith archive seal. Retain the transform as a dimensional reference only. The next uncommitted preview candidate is DgnObj_Zonau_Shutter_A_01.
