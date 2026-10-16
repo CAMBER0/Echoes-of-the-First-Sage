@@ -32,6 +32,8 @@ The exact Forgotten Temple grid and a non-blocking entrance transform still need
 
 The entrance is approved on the **large blank interior wall above the circular-room ledge**, centered between the two central stone pillars. The intended feature occupies the broad masonry panel rather than an existing arch, doorway, or traversal route.
 
+The placement is in MainField cell **D-2**. The vanilla actor Npc_Wanderer_LostTemple at position (-953.568, 32.945, -2822.111) is a visual reference point only. It is an existing NPC, not a temporary object and not an approved actor template. It must remain unchanged in both the map data and the final mod.
+
 For the first playable build, treat this as a **flush sealed archive door** with a nearby interactable Chronolith element. Do not cut a physical opening through the temple mesh yet. A flush, visibly dormant door lets us validate placement, interaction range, event flow, and save persistence without risking collision holes or broken navigation. The later reveal can swap or animate authored door-state geometry after the baseline loop is stable.
 
 ### Placement guardrails
@@ -44,3 +46,9 @@ For the first playable build, treat this as a **flush sealed archive door** with
 ## Source-control boundary
 
 The reference RomFS remains private and outside this repository. After the target grid and base flow are verified, copy only the edited overlay file or files into source/romfs/ while preserving their exact game-relative paths.
+
+## First visual probe
+
+The first actor to preview, without saving, is CaveObj_RuinZonau_Shutter_B_01. It is a candidate because it is a separate Zonai-ruin shutter actor rather than a vanilla NPC or an already scripted door. Add it as a **Static** actor in D-2, initially at the recorded reference point, then inspect its orientation, scale, and collision visually.
+
+This is a probe only. Do not overwrite Npc_Wanderer_LostTemple, and do not save the D-2 map until the actor is confirmed to fit the wall and a separate interaction method has been chosen.

@@ -4,7 +4,7 @@
 schema: echoes-ancient-hero-map-placement-design/v1
 placement_id: archive_of_hours_sealed_entrance
 world: MainField
-verified_map_grid: null
+verified_map_grid: D-2
 
 visual_anchor:
   description: >
@@ -13,6 +13,11 @@ visual_anchor:
   phase_1_composition: Flush sealed door plus a reachable Chronolith interaction point.
 
 transform:
+  # Reference only: this is the transform of the existing vanilla
+  # Npc_Wanderer_LostTemple actor. Never move, delete, or overwrite it.
+  reference_actor: Npc_Wanderer_LostTemple
+  reference_position_xyz: [-953.568, 32.945, -2822.111]
+  reference_rotation_xyz_degrees: [0.0, 0.0, 0.0]
   position_xyz: null
   rotation_xyz_degrees: null
   scale_xyz: [1.0, 1.0, 1.0]
@@ -25,6 +30,12 @@ collision_and_navigation:
 
 implementation_state:
   native_door_actor: null
+  first_visual_probe_actor: CaveObj_RuinZonau_Shutter_B_01
+  first_visual_probe_notes: >
+    Candidate only. Preview it as a separate Static actor in MapEditor before
+    saving. Reject it if its proportions, collision, or visual language conflict
+    with the temple wall.
   native_interaction_flow: null
   source_overlay_file: null
+  vanilla_reference_actor_must_remain_unchanged: true
   verified_in_game: false
