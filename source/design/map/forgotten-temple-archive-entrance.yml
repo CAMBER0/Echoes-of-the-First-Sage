@@ -40,14 +40,15 @@ collision_and_navigation:
 implementation_state:
   native_door_actor: null
   first_visual_probe_actor: CaveObj_RuinZonau_Shutter_B_01
-  next_visual_probe_actor: SkyObj_TempleOfTimeDoor_A_01
-  optional_frame_probe_actor: SkyObj_TempleOfTimeDoorFrame_A_01
+  next_visual_probe_actor: DgnObj_Zonau_RaiseDoor_A_01
+  alternate_solid_visual_actor: SkyObj_TempleOfTimeDoor_A_01
   first_visual_probe_notes: >
     The first candidate was a useful transform probe but was rejected as the
-    final art direction. The next candidate is the solid Great Sky Island
-    Temple of Time door. Preview the door alone before its optional frame,
-    without saving, and only select a final actor after proportions, collision,
-    and visual language have been verified.
+    final art direction. The next candidate is the native Zonai raise door,
+    selected because it is a solid, single-model door with a matching
+    MapEditor preview model. Its visual placement is the first test; its
+    native raise trigger must be verified separately before it is promised as
+    the final gameplay door.
   native_interaction_flow: null
   source_overlay_file: null
   vanilla_reference_actor_must_remain_unchanged: true

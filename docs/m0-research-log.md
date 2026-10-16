@@ -59,8 +59,10 @@ The actor was centered successfully at (-953.500, 33.000, -2821.500) with rotati
 
 The art result is rejected for the final entrance: its vertical green bars read as a conventional gate, not a concealed Chronolith archive seal. Retain the transform as a dimensional reference only.
 
-## Next visual probe: Great Sky Island Temple of Time door
+## Next visual probe: native Zonai raise door
 
-The verified solid-door actor is SkyObj_TempleOfTimeDoor_A_01. It is the preferred Phase 1 visual candidate because it hides the existing wall and matches the intended ancient, sealed-archive language. Preview this door **alone** first; its optional matching frame is SkyObj_TempleOfTimeDoorFrame_A_01.
+The next candidate is DgnObj_Zonau_RaiseDoor_A_01. It is the preferred visual test because it is a solid native Zonai door explicitly designed to raise upward, and the installed MapEditor model cache includes its matching model.
+
+Its name makes it the lowest-risk candidate for a rising-door effect, but a map preview alone does not prove the native trigger behavior. Before implementing the opening scene, inspect an existing placement of this exact actor and clone its links or event pattern. If that native behavior is too coupled to a dungeon system, retain the solid Temple of Time door as the static visual fallback and play the transfer scene without a physical opening.
 
 These are base-game actor references, not files to copy into the mod. If the final placement works, the overlay needs only the modified D-2 map data that places the existing actor. Do not copy Pack/Actor files from the reference RomFS into this repository.
