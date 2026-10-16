@@ -13,6 +13,7 @@ Story and technical pre-production. The first playable milestone is the Chronoli
 - [Story bible](docs/story-bible.md) - campaign structure, canon boundaries, regional chapters, and player-facing rewards.
 - [Chronolith Trial plan](docs/phase-01-modern-hook.md) - the first safe, testable gameplay milestone.
 - [Flag registry](docs/flag-registry.md) - design-state names and save-persistence rules; not yet native game-data keys.
+- [M0 research log](docs/m0-research-log.md) - verified data-layout observations and the next map-placement evidence to collect.
 
 ## Repository policy
 
